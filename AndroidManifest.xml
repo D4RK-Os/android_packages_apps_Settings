@@ -219,6 +219,18 @@
                   android:theme="@style/Theme.SubSettings"
                   android:taskAffinity="com.android.settings.root" />
 
+        <activity android:name=".ConfigCenterActivity"
+                  android:label="@string/config_center_title"
+                  android:icon="@drawable/d4rk_ic_settings_about"
+                  android:exported="false"
+                  android:theme="@style/Theme.SubSettings"
+                  android:taskAffinity="com.android.settings.root">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.d4rk.config.center.ConfigCenter" />
+            <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                       android:value="@string/d4rk_menu_key_config_center" />
+        </activity>
+
         <activity android:name=".Settings$CreateShortcutActivity"
                   android:exported="true"
                   android:label="@string/settings_shortcut">

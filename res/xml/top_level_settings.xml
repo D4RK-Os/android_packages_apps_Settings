@@ -21,6 +21,18 @@
     android:key="top_level_settings">
 
     <com.android.settings.widget.HomepagePreference
+        android:icon="@drawable/d4rk_ic_settings_about"
+        android:key="top_level_config_center"
+        android:order="-160"
+        android:title="@string/config_center_title"
+        android:summary="@string/config_center_dashboard_summary"
+        settings:highlightableMenuKey="@string/d4rk_menu_key_config_center">
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.ConfigCenterActivity" />
+    </com.android.settings.widget.HomepagePreference>
+
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_network"

@@ -8,6 +8,26 @@
 # Keep all Fragments in this package, which are used by reflection.
 -keep public class com.android.settings.** extends androidx.fragment.app.Fragment
 
+# ConfigCenter fragment names are persisted by FragmentManager and referenced in XML.
+-keep public class com.d4rk.config.center.ConfigCenter { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.About { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.Buttons { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.DisplayCutoutForceFullscreenSettings { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.HeadsUp { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.LockScreen { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.Media { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.Misc { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.Notifications { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.Screen { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.SmartPixels { public <init>(); }
+-keep public class com.d4rk.config.center.fragments.StatusBar { public <init>(); }
+-keep public class com.d4rk.config.center.preferences.CustomDialogPreference$CustomPreferenceDialogFragment { public <init>(); }
+
+# Custom XML-inflated preference; no removed-feature classes are retained.
+-keep public class com.d4rk.config.center.fragments.ButtonBacklightBrightness {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
 # Keep all preference controllers needed by slice and DashboardFragment.
 -keep class * extends com.android.settings.core.BasePreferenceController {
     *;

@@ -53,7 +53,10 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: ["src/**/*.java", "src/**/*.kt", ":D4RKConfigCenter-srcs"],
+
+    // Generate a ConfigCenter R alias from this same Settings resource table.
+    aaptflags: ["--extra-packages", "com.d4rk.config.center"],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -97,6 +100,7 @@ android_library {
         "vendor.lineage.fastcharge-V1.0-java",
         "SystemUISharedLib",
         "VendorSupport-preference",
+        "D4RKConfigCenter-resources",
         "kotlin-stdlib",
         "kotlinx_coroutines_android",
         "kotlinx_coroutines",
@@ -148,7 +152,7 @@ filegroup {
 // over all the sources together.
 filegroup {
     name: "Settings_srcs",
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: ["src/**/*.java", "src/**/*.kt", ":D4RKConfigCenter-srcs"],
 }
 
 filegroup {

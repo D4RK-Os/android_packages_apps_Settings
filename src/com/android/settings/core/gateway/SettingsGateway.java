@@ -180,6 +180,19 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
+import com.d4rk.config.center.ConfigCenter;
+import com.d4rk.config.center.fragments.About;
+import com.d4rk.config.center.fragments.Buttons;
+import com.d4rk.config.center.fragments.DisplayCutoutForceFullscreenSettings;
+import com.d4rk.config.center.fragments.HeadsUp;
+import com.d4rk.config.center.fragments.LockScreen;
+import com.d4rk.config.center.fragments.Media;
+import com.d4rk.config.center.fragments.Misc;
+import com.d4rk.config.center.fragments.Notifications;
+import com.d4rk.config.center.fragments.Screen;
+import com.d4rk.config.center.fragments.SmartPixels;
+import com.d4rk.config.center.fragments.StatusBar;
+
 import con.android.settings.wifi.tether.WifiTetherClientManager;
 
 public class SettingsGateway {
@@ -189,6 +202,19 @@ public class SettingsGateway {
      * security exception if the fragment it needs to display is not in this list.
      */
     public static final String[] ENTRY_FRAGMENTS = {
+            ConfigCenter.class.getName(),
+            About.class.getName(),
+            Buttons.class.getName(),
+            DisplayCutoutForceFullscreenSettings.class.getName(),
+            HeadsUp.class.getName(),
+            LockScreen.class.getName(),
+            Media.class.getName(),
+            Misc.class.getName(),
+            Notifications.class.getName(),
+            Screen.class.getName(),
+            SmartPixels.class.getName(),
+            StatusBar.class.getName(),
+            com.android.settings.gestures.GestureSettings.class.getName(),
             AdvancedConnectedDeviceDashboardFragment.class.getName(),
             CreateShortcut.class.getName(),
             BluetoothPairingDetail.class.getName(),
