@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Havoc-OS -->
-    <string name="havoc_title" translatable="false">Havoc-OS</string>
+    <string name="havoc_title" translatable="false">D4RK OS</string>
     <string name="about_device_name">Device</string>
 
     <!-- Units -->
@@ -27,7 +27,7 @@
     <string name="unit_hz">hz</string>
 
     <!-- About phone screen, Havoc-OS version -->
-    <string name="havoc_version">Havoc-OS version</string>
+    <string name="havoc_version">D4RK OS version</string>
     <string name="havoc_version_default">Unknown</string>
     <string name="havoc_version_summary">Version %1$s (%2$s)</string>
 
