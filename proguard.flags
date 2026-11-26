@@ -53,14 +53,14 @@
     *** get*();
 }
 
-# Keep classes that may be inflated from XML.
--keepclasseswithmembers class * {
+# Keep classes that may be inflated from XML; the removed Parts preference can be shrunk.
+-keepclasseswithmembers class !lineageos.preference.LineagePartsPreference,* {
     public <init>(android.content.Context, android.util.AttributeSet);
 }
--keepclasseswithmembers class * {
+-keepclasseswithmembers class !lineageos.preference.LineagePartsPreference,* {
     public <init>(android.content.Context, android.util.AttributeSet, int);
 }
--keepclasseswithmembers class * {
+-keepclasseswithmembers class !lineageos.preference.LineagePartsPreference,* {
     public <init>(android.content.Context, android.util.AttributeSet, int, int);
 }
 

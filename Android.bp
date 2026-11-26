@@ -126,7 +126,6 @@ android_app {
     system_ext_specific: true,
     privileged: true,
     required: [
-        "LineageParts",
         "privapp_whitelist_com.android.settings",
         "settings-platform-compat-config",
     ],
